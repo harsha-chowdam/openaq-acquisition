@@ -1,0 +1,20 @@
+[Unit]
+Description=OpenAQ S3 Archive Acquisition and Integrity Audit for Year %I
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=harsha
+Group=harsha
+WorkingDirectory=/home/harsha/openaq
+ExecStart=/home/harsha/openaq/bin/acquire_year.sh %I
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=180
+StandardOutput=journal
+StandardError=journal
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

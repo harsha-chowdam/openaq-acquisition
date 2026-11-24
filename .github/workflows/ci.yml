@@ -1,0 +1,40 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12', '3.13']
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r config/requirements.txt
+
+    - name: Run unit test suite
+      run: |
+        python -m unittest discover tests -v
+
+    - name: Verify CLI executables help commands
+      run: |
+        python bin/acquire_s3_archive.py --help
+        python bin/audit_acquisition_integrity.py --help
+        python bin/generate_manifest.py --help
+        python bin/verify_tar_archive.py --help
+        bash bin/acquire_year.sh -h || true
+        bash bin/acquire_campaign.sh || true

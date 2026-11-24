@@ -1,0 +1,35 @@
+{
+  "year": "2015",
+  "status": "SUCCESS",
+  "start_time_utc": "2026-11-24T09:29:38.895073+00:00",
+  "end_time_utc": "2026-11-24T09:30:30.533909+00:00",
+  "duration_seconds": 51.64,
+  "expected_files": 3590,
+  "acquired_files": 3590,
+  "missing_files_count": 0,
+  "dangling_files_count": 0,
+  "expected_bytes": 1757792,
+  "actual_compressed_bytes": 1757792,
+  "tar_container_bytes": 4425216,
+  "containers_verified": "12/12",
+  "missing_containers": [],
+  "offset_gaps_overlaps": 0,
+  "size_mismatches": 0,
+  "duplicate_keys": 0,
+  "integrity_check": {
+    "month_01_exhaustive": {
+      "verified": 78,
+      "corrupt": 0,
+      "sha256_mismatches": 0,
+      "gzip_errors": 0
+    },
+    "months_02_12_sampling": {
+      "sampled": 2585,
+      "corrupt": 0,
+      "sha256_mismatches": 0,
+      "gzip_errors": 0
+    }
+  },
+  "dry_run": false,
+  "audit_passed": true
+}

@@ -1,0 +1,35 @@
+{
+  "year": "2021",
+  "status": "SUCCESS",
+  "start_time_utc": "2026-11-24T03:22:08.294098+00:00",
+  "end_time_utc": "2026-11-24T03:23:08.676101+00:00",
+  "duration_seconds": 60.38,
+  "expected_files": 1642675,
+  "acquired_files": 1642675,
+  "missing_files_count": 0,
+  "dangling_files_count": 0,
+  "expected_bytes": 865512925,
+  "actual_compressed_bytes": 865512925,
+  "tar_container_bytes": 2117405696,
+  "containers_verified": "12/12",
+  "missing_containers": [],
+  "offset_gaps_overlaps": 0,
+  "size_mismatches": 0,
+  "duplicate_keys": 0,
+  "integrity_check": {
+    "month_01_exhaustive": {
+      "verified": 160388,
+      "corrupt": 0,
+      "sha256_mismatches": 0,
+      "gzip_errors": 0
+    },
+    "months_02_12_sampling": {
+      "sampled": 11000,
+      "corrupt": 0,
+      "sha256_mismatches": 0,
+      "gzip_errors": 0
+    }
+  },
+  "dry_run": false,
+  "audit_passed": true
+}

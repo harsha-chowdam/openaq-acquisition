@@ -1,0 +1,22 @@
+# =====================================================================
+# OpenAQ Acquisition Pipeline Configuration Template
+# Copy this file to .env or source it in your shell environment.
+# DO NOT commit real API keys, SSH keys, or tokens to version control.
+# =====================================================================
+
+# Project Base Directory (Default production path)
+OPENAQ_PROJECT_DIR="/home/harsha/openaq"
+
+# Target AWS S3 Bucket (Public anonymous access)
+OPENAQ_S3_BUCKET="openaq-data-archive"
+OPENAQ_S3_REGION="us-east-1"
+
+# Concurrency & Worker Threads
+OPENAQ_WORKERS=50
+
+# Global Manifest Path
+OPENAQ_MANIFEST_PATH="/home/harsha/openaq/manifest/s3_manifest_modern.csv.gz"
+
+# Optional: OpenAQ REST API Key (Only used if performing REST discovery)
+# Free keys can be generated at https://openaq.org
+OPENAQ_API_KEY="your_openaq_api_key_here"
